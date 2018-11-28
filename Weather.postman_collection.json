@@ -361,7 +361,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n   \"__v\":0,\r\n   \"alerts\":{\r\n         \"conditions\":[\r\n            {\r\n               \"current_value\":{\r\n                  \"min\":1,\r\n                  \"max\":10\r\n               },\r\n               \"condition\":{\r\n                  \"name\":\"wind_speed\",\r\n                  \"expression\":\"$gte\",\r\n                  \"amount\":5\r\n               }\r\n            }\r\n         ],\r\n         \"coordinates\":{\r\n            \"lon\":53,\r\n            \"lat\":56\r\n         }\r\n      }\r\n   ,\r\n   \"area\":[\r\n      {\r\n         \"type\":\"Point\",\r\n         \"coordinates\":[\r\n            53,\r\n            56\r\n         ]\r\n      }\r\n   ],\r\n   \"conditions\":[\r\n      {\r\n         \"name\":\"wind_speed\",\r\n         \"expression\":\"$gte\",\r\n         \"amount\":5\r\n      }\r\n   ],\r\n   \"time_period\":{\r\n      \"end\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":432000000\r\n      },\r\n      \"start\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":132000000\r\n      }\r\n   }\r\n}"
+					"raw": "{\r\n   \"__v\":0,\r\n   \"alerts\":{\r\n         \"conditions\":[\r\n            {\r\n               \"current_value\":{\r\n                  \"min\":1,\r\n                  \"max\":10\r\n               },\r\n               \"condition\":{\r\n                  \"name\":\"wind_speed\",\r\n                  \"expression\":\"$gte\",\r\n                  \"amount\":5\r\n               }\r\n            }\r\n         ],\r\n         \"coordinates\":{\r\n            \"lon\":53,\r\n            \"lat\":56\r\n         }\r\n      }\r\n   ,\r\n   \"area\":[\r\n      {\r\n         \"type\":\"Point\",\r\n         \"coordinates\":[\r\n            56,\r\n            53\r\n         ]\r\n      }\r\n   ],\r\n   \"conditions\":[\r\n      {\r\n         \"name\":\"wind_speed\",\r\n         \"expression\":\"$gte\",\r\n         \"amount\":5\r\n      }\r\n   ],\r\n   \"time_period\":{\r\n      \"end\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":432000000\r\n      },\r\n      \"start\":{\r\n         \"expression\":\"after\",\r\n         \"amount\":132000000\r\n      }\r\n   }\r\n}"
 				},
 				"url": {
 					"raw": "http://api.openweathermap.org/data/3.0/triggers?APPID=cbb3210df49fdf1c3c675a785e42454b",
@@ -375,6 +375,39 @@
 						"data",
 						"3.0",
 						"triggers"
+					],
+					"query": [
+						{
+							"key": "APPID",
+							"value": "cbb3210df49fdf1c3c675a785e42454b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/3.0/triggers/5bfeacb6b4068000150e9663?APPID=cbb3210df49fdf1c3c675a785e42454b",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"3.0",
+						"triggers",
+						"5bfeacb6b4068000150e9663"
 					],
 					"query": [
 						{
