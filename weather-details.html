@@ -2,9 +2,113 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Погода в городе Ижевск">
+    <meta name="author" content="Прозорова Ксения">
     <title>Five-day weather forecast</title>
+    <link rel="stylesheet" href="styles/main.css"></linkrel>
   </head>
+
   <body>
-    <h1>Подробный прогноз погоды на день</h1>
+    <header>
+      <div class="topnav">
+        <a class="active" href="weather-details.html">СЕГОДНЯ</a>
+        <a href="index.html">5 ДНЕЙ</a>
+        <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
+      </div>
+    </header>
+    <div class="pollution">
+      Загрязнение воздуха:
+      <form method="GET" action="">
+      <input type="search" name="searcharea" placeholder="Search">
+      <button type="submit"></button>
+      </form>
+    </div>
+    <br>
+    <br>
+    <div class="commcharact">
+      <div id="place">Ижевск, Россия</div>
+      <div id="day">среда</div>
+      <div id="sky">облачно</div>
+    </div>
+
+    <div class="widecharact">
+      <div id="preciptation">Вероятность осадков: 20%</div>
+      <div id="humidity">Влажность: 45%</div>
+      <div id="wind_speed">Ветер: 11 км/ч</div>
+    </div>
+    <div class="images">
+      <span id="clouds"><img src='styles/images/SunnyWeather_2@3x.png' alt='облачно'></span>
+      <span id="temp">22&#8451;</span>
+    </div>
+    <div class="navigate">
+     <button id="buttontemp">Температура</button>
+     <button id="buttonprec">Вероятность выпадения осадков</button>
+     <button id="buttonwind">Ветер</button>
+    </div>
+    
+    <div id="floatpanel" title="такая-то температура">тут температура</div>
+    <div id="floatpanel2" title="такие-то осадки">тут осадки</div>
+    <div id="floatpanel3" title="такой-то ветер">тут ветер</div>
+    <div class="weatherblock" title="такая-то температура">
+      <div id="fst">
+        <h3>день</h3>
+        <img src="assets/sun.png" alt="img">
+        <div>
+          <span id="max">max</span>
+          <span id="min">min</span>
+        </div>
+      </div>
+      <div id="fst">
+        <h3>день</h3>
+        <img src="assets/sun.png" alt="img">
+        <div>
+          <span id="max">max</span>
+          <span id="min">min</span>
+        </div>
+      </div>
+      <div id="fst">
+        <h3>день</h3>
+        <img src="assets/sun.png" alt="img">
+        <div>
+          <span id="max">max</span>
+          <span id="min">min</span>
+        </div>
+      </div>
+      <div id="fst">
+        <h3>день</h3>
+        <img src="assets/sun.png" alt="img">
+        <div>
+          <span id="max">max</span>
+          <span id="min">min</span>
+        </div>
+      </div>
+      <div id="fst">
+        <h3>день</h3>
+       <img src="assets/sun.png" alt="img">
+       <div>
+         <span id="max">max</span>
+         <span id="min">min</span>
+        </div>
+      </div>
+      <div id="fst">
+       <h3>день</h3>
+       <img src="assets/sun.png" alt="img">
+       <div>
+         <span id="max">max</span>
+         <span id="min">min</span>
+       </div>
+      </div>
+      <div id="fst">
+       <h3>день</h3>
+       <img src="assets/sun.png" alt="img">
+       <div>
+         <span id="max">max</span>
+         <span id="min">min</span>
+       </div>
+       </div>
+    </div>
+    <div class="footer">
+      2018 &copy; Copyright
+    </div>
   </body>
 </html>
