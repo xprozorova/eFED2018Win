@@ -7,10 +7,216 @@
     <script type="text/javascript" src="mocks/HistoricalReviewMock.js"></script>
     <script type="text/javascript" src="mocks/WeekForecastMock.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <link rel="stylesheet" href="styles/main.css"></linkrel>
   </head>
   <body>
-    <h1>Пятидневный прогноз погоды</h1>
-    <div id="mainInfo">
+    <header class="topnav">
+      <a class="active" href="weather-details.html">СЕГОДНЯ</a>
+      <a href="index.html">5 ДНЕЙ</a>
+      <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
+    </header>
+    <article class="weather">
+        <span id="indexhead"></span>
+        <img id="upicon" src="assets/cloudyweather.png">
+        <span id="indextemp">22&#8451;</span>
+        <span id="indexplace">Ижевск, Россия</span> 
+      <form method="GET" action="">
+      <input type="search" name="searcharea" placeholder="Search">
+      <button type="submit"></button>
+      </form>
+    </article>
+    <br>
+    <br>
+    <section class="itable">
+      <ul class="table-row-1">
+        <li class="table-cell-1">Day 1, Date</li>
+        <li class="table-cell-1">Day 2, Date</li>
+        <li class="table-cell-1">Day 3, Date</li>
+        <li class="table-cell-1">Day 4, Date</li>
+        <li class="table-cell-1">Day 5, Date</li>
+      </ul>
+      <ul class="table-row-2">
+        <li class="table-cell-2">
+          <ul id="am-pm">
+            <li id="ks"><span>Ночь</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Утро</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li  id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>День</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+            </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Вечер</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+        </li>
+        <li class="table-cell-2">
+          <ul id="am-pm">
+            <li id="ks"><span>Ночь</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Утро</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li  id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>День</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+            </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Вечер</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+        </li>
+        <li class="table-cell-2">
+          <ul id="am-pm">
+            <li id="ks"><span>Ночь</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Утро</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li  id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>День</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+            </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Вечер</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+        </li>
+        <li class="table-cell-2">
+        <ul id="am-pm">
+            <li id="ks"><span>Ночь</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Утро</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li  id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>День</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+            </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Вечер</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+        </li>
+        <li class="table-cell-2">
+          <ul id="am-pm">
+            <li id="ks"><span>Ночь</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Утро</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li  id="ks"><p>+18</p></li>
+          </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>День</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+            </ul>
+          <ul id="am-pm">
+            <li id="ks"><span>Вечер</span></li>
+            <li id="ks"><img id="tableicon" src="assets/cloudyweather.png"></li>
+            <li id="ks"><p>+18</p></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="table-row-3">
+        <li class="table-cell-3">Максимальная скорость ветра, м/с</li>
+      </ul>
+      <ul class="table-row-4">
+        <li class="table-cell-4">
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+        </li>
+        <li class="table-cell-4">
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+        </li>
+        <li class="table-cell-4">
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+        </li>
+        <li class="table-cell-4">
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>  
+        </li>
+        <li class="table-cell-4">
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>
+          <figure><span id="num">2</span></figure>  
+        </li>
+      </ul>
+      <ul class="table-row-5">
+        <li class="table-cell-5">Осадки</li>
+      </ul>
+      <ul class="table-row-6">
+        <li class="table-cell-6"></li>
+        <li class="table-cell-6"></li>
+        <li class="table-cell-6"></li>
+        <li class="table-cell-6"></li>
+        <li class="table-cell-6"></li>
+      </ul>
+    </section>
+    <article id="sun-moon"><span id="weather-under-table-1">Пятница, 18 мая, сегодня</span><span id="weather-under-table-2">Солнце и луна</span></article>
+    <section id="onetwothree">
+      <section class="table-pic"><img id="table-pic" src="assets/CloudyWeather.png"></section>
+      <section class="table-sun">
+        <span id="one-string">Долгота дня - </span><br>
+        <span id="one-string">Восход - </span><br>
+        <span id="one-string">Заход - </span><br>
+      </section>
+      <section class="table-pic"><img id="table-pic" src="assets/CloudyWeather.png"></section>
+      <section class="table-sun">
+          <span id="one-string">Долгота дня - </span><br>
+          <span id="one-string">Восход - </span><br>
+          <span id="one-string">Заход - </span>
+      </section>
+    </section>
+
+    <br>
+  <article id="day-statistic"></article>
+    <span id="large">Сегодня день на 2 минуты длиннее, чем вчера</span>
+    <span id="large">Полнолуние - 28 июня, через 23 дня</span>
+  </article>
+    <footer>
+      2018 &copy; Copyright
+    </footer>
   </body>
   
 </html>
