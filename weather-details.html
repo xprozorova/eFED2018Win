@@ -4,111 +4,201 @@
     <meta charset="UTF-8">
     <meta name="description" content="Погода в городе Ижевск">
     <meta name="author" content="Прозорова Ксения">
-    <title>Five-day weather forecast</title>
+    <title>Today weather forecast</title>
     <link rel="stylesheet" href="styles/main.css"></linkrel>
   </head>
 
   <body>
-    <header>
-      <div class="topnav">
+    <header class="topnav">
         <a class="active" href="weather-details.html">СЕГОДНЯ</a>
         <a href="index.html">5 ДНЕЙ</a>
         <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
-      </div>
     </header>
-    <div class="pollution">
+    <article class="pollution">
       Загрязнение воздуха:
       <form method="GET" action="">
       <input type="search" name="searcharea" placeholder="Search">
       <button type="submit"></button>
       </form>
-    </div>
+    </article>
     <br>
     <br>
-    <div class="commcharact">
-      <div id="place">Ижевск, Россия</div>
-      <div id="day">среда</div>
-      <div id="sky">облачно</div>
-    </div>
+    <section class="commcharact">
+      <span id="place">Ижевск, Россия</span>
+      <span id="day">среда</span>
+      <span id="sky">облачно</span>
+    </section>
 
-    <div class="widecharact">
-      <div id="preciptation">Вероятность осадков: 20%</div>
-      <div id="humidity">Влажность: 45%</div>
-      <div id="wind_speed">Ветер: 11 км/ч</div>
-    </div>
-    <div class="images">
-      <span id="clouds"><img src='styles/images/SunnyWeather_2@3x.png' alt='облачно'></span>
+    <section class="widecharact">
+      <span id="preciptation">Вероятность осадков: 20%</span>
+      <span id="humidity">Влажность: 45%</span>
+      <span id="wind_speed">Ветер: 11 км/ч</span>
+    </section>
+    <section class="images">
+      <span id="clouds"><img id="left-temp" src='assets/new/cloudy.png' alt='облачно'></span>
       <span id="temp">22&#8451;</span>
-    </div>
-    <div class="navigate">
+    </section>
+    <nav class="navigate">
      <button id="buttontemp">Температура</button>
      <button id="buttonprec">Вероятность выпадения осадков</button>
      <button id="buttonwind">Ветер</button>
-    </div>
+    </nav>
     
-    <div id="floatpanel" title="такая-то температура">тут температура</div>
-    <div id="floatpanel2" title="такие-то осадки">тут осадки</div>
-    <div id="floatpanel3" title="такой-то ветер">тут ветер</div>
-    <div class="weatherblock" title="такая-то температура">
-      <div id="fst">
-        <h3>день</h3>
-        <img src="assets/sun.png" alt="img">
-        <div>
+    <section class="hidden-panel">
+    <section id="floatpanel" title="такая-то температура">тут температура</section>
+    <section id="floatpanel2" title="такие-то осадки">тут осадки</section>
+    <section id="floatpanel3" title="такой-то ветер">тут ветер</section>
+    </section>
+   <!--
+    <section class="weather-block" title="такая-то температура">
+      <span id="fst">
+        <span id="ratata">день</span>
+        <br>
+        <img src="assets/new/cloudy.png" alt="img">
+        <br>
+        <span>
           <span id="max">max</span>
           <span id="min">min</span>
-        </div>
-      </div>
-      <div id="fst">
-        <h3>день</h3>
-        <img src="assets/sun.png" alt="img">
-        <div>
+        </span>
+      </span>
+      <span id="fst">
+        <span id="ratata">день</span>
+        <br>
+        <img src="assets/new/partly_cloudy.png" alt="img">
+        <br>
+        <span>
           <span id="max">max</span>
           <span id="min">min</span>
-        </div>
-      </div>
-      <div id="fst">
-        <h3>день</h3>
-        <img src="assets/sun.png" alt="img">
-        <div>
+        </span>
+      </span>
+      <span id="fst">
+        <span id="ratata">день</span>
+        <br>
+        <img src="assets/new/heavy_rain.png" alt="img">
+        <br>
+        <span>
           <span id="max">max</span>
           <span id="min">min</span>
-        </div>
-      </div>
-      <div id="fst">
-        <h3>день</h3>
-        <img src="assets/sun.png" alt="img">
-        <div>
+        </span>
+      </span>
+      <span id="fst">
+        <span id="ratata">день</span>
+        <br>
+        <img src="assets/new/night_rain_thunder.png" alt="img">
+        <br>
+        <span>
           <span id="max">max</span>
           <span id="min">min</span>
-        </div>
-      </div>
-      <div id="fst">
-        <h3>день</h3>
-       <img src="assets/sun.png" alt="img">
-       <div>
+        </span>
+      </span>
+      <span id="fst">
+        <span id="ratata">день</span>
+        <br>
+       <img src="assets/new/heavy_rain.png" alt="img">
+       <br>
+       <span>
          <span id="max">max</span>
          <span id="min">min</span>
-        </div>
-      </div>
-      <div id="fst">
-       <h3>день</h3>
-       <img src="assets/sun.png" alt="img">
-       <div>
+       </span>
+      </span>
+      <span id="fst">
+        <span id="ratata">день</span>
+       <br>
+       <img src="assets/new/rain_sun.png" alt="img">
+       <br>
+       <span>
          <span id="max">max</span>
          <span id="min">min</span>
-       </div>
-      </div>
-      <div id="fst">
-       <h3>день</h3>
-       <img src="assets/sun.png" alt="img">
-       <div>
+       </span>
+      </span>
+      <span id="fst">
+        <span id="ratata">день</span>
+       <br>
+       <img src="assets/new/rain_thunder_sun.png" alt="img">
+       <br>
+       <span>
          <span id="max">max</span>
          <span id="min">min</span>
-       </div>
-       </div>
-    </div>
-    <div class="footer">
+       </span>
+      </span>
+    </section>
+    -->
+    <section class="weatherblock" title="такая-то температура">
+      <ul class="ya">
+        <li class="yacell">
+          <span id="ratata">пн</span>
+          <br>
+          <img id="re" src="assets/new/cloudy.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">вт</span>
+          <br>
+          <img id="re" src="assets/new/partly_cloudy.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">ср</span>
+          <br>
+          <img id="re" src="assets/new/heavy_rain.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">чт</span>
+          <br>
+          <img id="re" src="assets/new/heavy_rain.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">пт</span>
+           <br>
+           <img id="re" src="assets/new/rain_sun.png" alt="img">
+           <br>
+           <span>
+             <span id="max">max</span>
+             <span id="min">min</span>
+           </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">сб</span>
+          <br>
+          <img id="re" src="assets/new/rain_sun.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">вс</span>
+          <br>
+          <img id="re" src="assets/new/rain_thunder_sun.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+      </ul>
+    </section>
+    <footer>
       2018 &copy; Copyright
-    </div>
+    </footer>
   </body>
 </html>
