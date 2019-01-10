@@ -35,25 +35,23 @@ var b={ one: 1, two: '2' }
 console.log(deepCompare(a,b));
 
 //FUNCTION CHESSBOARD
-var black="#";
-var white=" ";
-
 function ChessBoard(iWidth, iHeight){
-  var newString=[];
+  var newString = '\n';
   for (var i=1; i <= iHeight; i++){
-    newString=[];
     for (var j=1; j <= iWidth; j++){
       if ((i+j)%2==0){
-        newString.push(black);
+        newString += "#";
       } else {
-        newString.push(white);
-      }            
+        newString += " ";
+      }
     }
-    console.log(newString);
-    }
+    newString += '\n';
+  }   
+  return newString;
 }
 
 console.log(ChessBoard(8, 4));
+
 
 //FUNCTION MAKEARRAY
 
@@ -86,15 +84,16 @@ function reverseArray(mas){
 console.log(reverseArray(["A", "B", "C", "D"]));
 
 //FUNCTION REVERCEARRAYINPLACE
-function reverseArrayInPlace(mas){
-    var copyMas=mas.slice();
-    mas=[];
-    for (var i=(copyMas.length-1); i>=0; i--){
-      mas.push(copyMas[i]);
-    }
-    return mas;
+function ReverseArrayInPlace(mas) {
+  for (var start=0, end=mas.length-1;start<end; ++start, --end) {
+    var temp = mas[start];
+    mas[start] = mas[end];
+    mas[end] = temp;
+  }
+  
+  return mas;
 }
-console.log(reverseArrayInPlace(["A", "B", "C", "D"]));
+console.log(ReverseArrayInPlace([1, 2, 3, 4, 5]));
 
 //FUNCTION MERGEARRAYS
 function mergeArrays(){
