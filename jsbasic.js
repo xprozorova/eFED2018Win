@@ -68,7 +68,7 @@ function getNames(date){
     month: 'long',
     weekday: 'long'    
   };
-  return (date.toLocaleString("en-US", options));
+  return (date.toLocaleString("en-US", {month: 'long'})+ ', '+date.toLocaleString("en-US", {weekday: 'long'}));
 }
 console.log(getNames(new Date())); // "Wednesday (month: January)"
 
