@@ -2,9 +2,192 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Five-day weather forecast</title>
+    <meta name="description" content="Погода в городе Ижевск">
+    <meta name="author" content="Прозорова Ксения">
+    <title>Today weather forecast</title>
+    <link rel="stylesheet" href="styles/weather-details.css"></linkrel>
+    <script src="js/weatherDetails.js" type="text/javascript"></script>
   </head>
+
   <body>
-    <h1>Подробный прогноз погоды на день</h1>
+    <header class="topnav">
+        <a class="active" href="weather-details.html">СЕГОДНЯ</a>
+        <a href="index.html">5 ДНЕЙ</a>
+        <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
+    </header>
+    <article class="pollution">
+      Загрязнение воздуха:
+      <form method="GET" action="">
+      <input type="search" name="searcharea" placeholder="Search">
+      <button type="submit"></button>
+      </form>
+    </article>
+    <br>
+    <br>
+    <section class="commcharact">
+      <span id="place">Ижевск, Россия</span>
+      <span id="day">среда</span>
+      <span id="sky">облачно</span>
+    </section>
+
+    <section class="widecharact">
+      <span id="preciptation">Вероятность осадков: 20%</span>
+      <span id="humidity">Влажность: 45%</span>
+      <span id="wind_speed">Ветер: 11 км/ч</span>
+    </section>
+    <section class="images">
+      <span id="clouds"><img id="left-temp" src='assets/new/cloudy.png' alt='облачно'></span>
+      <span id="temp">22&#8451;</span>
+    </section>
+    <nav class="navigate">
+     <button id="buttontemp" class="panel active" onclick="currentSlide(1)" >Температура</button>
+     <button id="buttonprec" class="panel" onclick="currentSlide(2)">Вероятность выпадения осадков</button>
+     <button id="buttonwind" class="panel" onclick="currentSlide(3)">Ветер</button>
+    </nav>
+
+    <ul id="slider">
+      <li class="slide active"> <!--ТЕМПЕРАТУРА-->
+        <section class="inset active-tab">
+          <div class="temperature-graph-time">
+            <div class="temperature-graph-numbers">
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+              <div class="temperature-frame">
+                <div class="temperature-frame__14-degrees"></div>
+                <div>14</div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+      </li>
+      <li class="slide">
+         КОНТЕНТ 2
+      </li>
+      <li class="slide">
+        КОНТЕНТ 3
+      </li>
+    </ul>  
+    <div class="time-row">
+      <div class="time-of-day">17:00</div>
+      <div class="time-of-day">20:00</div>
+      <div class="time-of-day">23:00</div>
+      <div class="time-of-day">2:00</div>
+      <div class="time-of-day">5:00</div>
+      <div class="time-of-day">8:00</div>
+      <div class="time-of-day">11:00</div>
+      <div class="time-of-day">14:00</div>
+  </div>
+  <br>
+    <section class="weatherblock" title="такая-то температура">
+      <ul class="ya">
+        <li class="yacell">
+          <span id="ratata">пн</span>
+          <br>
+          <img id="re" src="assets/new/cloudy.png" alt="img">
+          <br>
+          <span class="maxmin">
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">вт</span>
+          <br>
+          <img id="re" src="assets/new/partly_cloudy.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">ср</span>
+          <br>
+          <img id="re" src="assets/new/heavy_rain.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">чт</span>
+          <br>
+          <img id="re" src="assets/new/heavy_rain.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">пт</span>
+           <br>
+           <img id="re" src="assets/new/rain_sun.png" alt="img">
+           <br>
+           <span>
+             <span id="max">max</span>
+             <span id="min">min</span>
+           </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">сб</span>
+          <br>
+          <img id="re" src="assets/new/rain_sun.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+        <li class="yacell">
+          <span id="ratata">вс</span>
+          <br>
+          <img id="re" src="assets/new/rain_thunder_sun.png" alt="img">
+          <br>
+          <span>
+            <span id="max">max</span>
+            <span id="min">min</span>
+          </span>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      2018 &copy; Copyright
+    </footer>
   </body>
 </html>
