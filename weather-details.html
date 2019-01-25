@@ -16,183 +16,310 @@
     </header>
     <article class="pollution">
       Загрязнение воздуха:
-      <form method="GET" action="">
-      <input type="search" name="searcharea" placeholder="Search">
-      <button type="submit"></button>
-      </form>
+      <input id="search" type="text" name="searcharea" placeholder="Search">
     </article>
     <br>
     <br>
-    <section class="commcharact">
-      <span id="place">Ижевск, Россия</span>
-      <span id="day">среда</span>
-      <span id="sky">облачно</span>
+    <section class="current-charact">
+      <span id="city"></span>
+      <span id="day"></span>
+      <span id="sky">gjj</span>
     </section>
 
-    <section class="widecharact">
-      <span id="preciptation">Вероятность осадков: 20%</span>
-      <span id="humidity">Влажность: 45%</span>
-      <span id="wind_speed">Ветер: 11 км/ч</span>
+    <section class="prec-hum-wind">
+      <span id="preciptation"></span>
+      <span id="humidity"></span>
+      <span id="wind-speed"></span>
     </section>
     <section class="images">
       <span id="clouds"><img id="left-temp" src='assets/new/cloudy.png' alt='облачно'></span>
-      <span id="temp">22&#8451;</span>
+      <span id="temp">&#8451;</span>
     </section>
     <nav class="navigate">
-     <button id="buttontemp">Температура</button>
-     <button id="buttonprec">Вероятность выпадения осадков</button>
-     <button id="buttonwind">Ветер</button>
+     <button id="buttontemp" class="panel panel-active" onclick="currentSlide(1)" >Температура</button>
+     <button id="buttonprec" class="panel" onclick="currentSlide(2)">Вероятность выпадения осадков</button>
+     <button id="buttonwind" class="panel" onclick="currentSlide(3)">Ветер</button>
     </nav>
+
+    <ul id="slider">
+      <li class="slide active"> <!--ТЕМПЕРАТУРА-->
+        <section class="inset active-tab">
+          <div id="slide-temp-graphic">
+            <div class="slide-temp-date">
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
     
-    <section class="hidden-panel">
-    <section id="floatpanel" title="такая-то температура">тут температура</section>
-    <section id="floatpanel2" title="такие-то осадки">тут осадки</section>
-    <section id="floatpanel3" title="такой-то ветер">тут ветер</section>
-    </section>
-   <!--
-    <section class="weather-block" title="такая-то температура">
-      <span id="fst">
-        <span id="ratata">день</span>
-        <br>
-        <img src="assets/new/cloudy.png" alt="img">
-        <br>
-        <span>
-          <span id="max">max</span>
-          <span id="min">min</span>
-        </span>
-      </span>
-      <span id="fst">
-        <span id="ratata">день</span>
-        <br>
-        <img src="assets/new/partly_cloudy.png" alt="img">
-        <br>
-        <span>
-          <span id="max">max</span>
-          <span id="min">min</span>
-        </span>
-      </span>
-      <span id="fst">
-        <span id="ratata">день</span>
-        <br>
-        <img src="assets/new/heavy_rain.png" alt="img">
-        <br>
-        <span>
-          <span id="max">max</span>
-          <span id="min">min</span>
-        </span>
-      </span>
-      <span id="fst">
-        <span id="ratata">день</span>
-        <br>
-        <img src="assets/new/night_rain_thunder.png" alt="img">
-        <br>
-        <span>
-          <span id="max">max</span>
-          <span id="min">min</span>
-        </span>
-      </span>
-      <span id="fst">
-        <span id="ratata">день</span>
-        <br>
-       <img src="assets/new/heavy_rain.png" alt="img">
-       <br>
-       <span>
-         <span id="max">max</span>
-         <span id="min">min</span>
-       </span>
-      </span>
-      <span id="fst">
-        <span id="ratata">день</span>
-       <br>
-       <img src="assets/new/rain_sun.png" alt="img">
-       <br>
-       <span>
-         <span id="max">max</span>
-         <span id="min">min</span>
-       </span>
-      </span>
-      <span id="fst">
-        <span id="ratata">день</span>
-       <br>
-       <img src="assets/new/rain_thunder_sun.png" alt="img">
-       <br>
-       <span>
-         <span id="max">max</span>
-         <span id="min">min</span>
-       </span>
-      </span>
-    </section>
-    -->
-    <section class="weatherblock" title="такая-то температура">
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+              <div class="slide-temp">
+                <div class="slide-temp-degrees-plus"></div>
+                <div class="slide-temp-prop">14</div>
+                <div class="slide-temp-degrees-minus"></div>
+              </div>
+    
+            </div>
+          </div>
+        </section>
+      </li>
+      <li class="slide">
+          <div id="rainfall-percentage">
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-44"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-23"></div>
+              <div>24%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-15"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-23"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-30"></div>
+              <div>30%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-38"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-37"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-23"></div>
+              <div>24%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-15"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-11"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-11"></div>
+              <div>8%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-15"></div>
+            </div> 
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-44"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-23"></div>
+              <div>24%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+            <div class="rainfall-level-15"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-23"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-30"></div>
+              <div>30%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-38"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-37"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-23"></div>
+              <div>24%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-15"></div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-11">
+              </div>
+              </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-11"></div>
+              <div>8%</div>
+            </div>
+            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-level-15"></div>
+            </div>  
+          </div>                 
+      </li>
+      <li class="slide">
+        <div class="slide-wind">
+          <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="северо-восточный">
+            </div>
+            <div class="wind-speed">7 м/с</div>
+          </div>
+
+          <div class="slide-wind__wind-speed">
+            <div class="wind-320-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="северо-восточный">
+            </div>
+            <div class="wind-speed">5 м/с</div>
+        </div>
+
+          <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="восточный">
+            </div>
+            <div class="wind-speed">5 м/с</div>
+          </div>
+
+          <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="восточный">
+            </div>
+            <div class="wind-speed">5 м/с</div>
+          </div>
+        <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="восточный">
+            </div>
+            <div class="wind-speed">6 м/с</div>
+        </div>
+          <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="восточный">
+            </div>
+            <div class="wind-speed">6 м/с</div>
+          </div>
+          <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="восточный">
+            </div>
+            <div class="wind-speed">6 м/с</div>
+          </div>
+          <div class="slide-wind__wind-speed">
+            <div class="wind-degrees">
+                <img src="assets/new/arrow.png" width="40px" alt="восточный">
+            </div>
+            <div class="wind-speed">5 м/с</div>
+          </div>
+        </div>
+      </li>
+    </ul>  
+    <div class="time-row">
+      <div class="time-of-day">17:00</div>
+      <div class="time-of-day">20:00</div>
+      <div class="time-of-day">23:00</div>
+      <div class="time-of-day">2:00</div>
+      <div class="time-of-day">5:00</div>
+      <div class="time-of-day">8:00</div>
+      <div class="time-of-day">11:00</div>
+      <div class="time-of-day">14:00</div>
+  </div>
+  <br>
+    <section id="weatherblock" title="такая-то температура">
       <ul class="ya">
-        <li class="yacell">
+        <li class="yacell yacell-active">
           <span id="ratata">пн</span>
           <br>
-          <img id="re" src="assets/new/cloudy.png" alt="img">
+          <img class="re" src="assets/new/cloudy.png" alt="img">
           <br>
-          <span>
-            <span id="max">max</span>
-            <span id="min">min</span>
+          <span class="maxmin">
+            <span id="daily">daily</span>
+            <span id="night">night</span>
           </span>
         </li>
         <li class="yacell">
           <span id="ratata">вт</span>
           <br>
-          <img id="re" src="assets/new/partly_cloudy.png" alt="img">
+          <img class="re" src="assets/new/partly_cloudy.png" alt="img">
           <br>
-          <span>
-            <span id="max">max</span>
-            <span id="min">min</span>
+          <span class="maxmin">
+            <span id="daily">daily</span>
+            <span id="night">night</span>
           </span>
         </li>
         <li class="yacell">
           <span id="ratata">ср</span>
           <br>
-          <img id="re" src="assets/new/heavy_rain.png" alt="img">
+          <img class="re" src="assets/new/heavy_rain.png" alt="img">
           <br>
-          <span>
-            <span id="max">max</span>
-            <span id="min">min</span>
+          <span class="maxmin">
+            <span id="daily">daily</span>
+            <span id="night">night</span>
           </span>
         </li>
         <li class="yacell">
           <span id="ratata">чт</span>
           <br>
-          <img id="re" src="assets/new/heavy_rain.png" alt="img">
+          <img class="re" src="assets/new/heavy_rain.png" alt="img">
           <br>
-          <span>
-            <span id="max">max</span>
-            <span id="min">min</span>
+          <span class="maxmin">
+            <span id="daily">daily</span>
+            <span id="night">night</span>
           </span>
         </li>
         <li class="yacell">
           <span id="ratata">пт</span>
            <br>
-           <img id="re" src="assets/new/rain_sun.png" alt="img">
+           <img class="re" src="assets/new/rain_sun.png" alt="img">
            <br>
-           <span>
-             <span id="max">max</span>
-             <span id="min">min</span>
+           <span class="maxmin">
+             <span id="daily">daily</span>
+             <span id="night">night</span>
            </span>
         </li>
         <li class="yacell">
           <span id="ratata">сб</span>
           <br>
-          <img id="re" src="assets/new/rain_sun.png" alt="img">
+          <img class="re" src="assets/new/rain_sun.png" alt="img">
           <br>
-          <span>
-            <span id="max">max</span>
-            <span id="min">min</span>
+          <span class="maxmin">
+            <span id="daily">daily</span>
+            <span id="night">night</span>
           </span>
         </li>
         <li class="yacell">
           <span id="ratata">вс</span>
           <br>
-          <img id="re" src="assets/new/rain_thunder_sun.png" alt="img">
+          <img class="re" src="assets/new/rain_thunder_sun.png" alt="img">
           <br>
-          <span>
-            <span id="max">max</span>
-            <span id="min">min</span>
+          <span class="maxmin">
+            <span id="daily">daily</span>
+            <span id="night">night</span>
           </span>
         </li>
       </ul>
@@ -200,5 +327,7 @@
     <footer>
       2018 &copy; Copyright
     </footer>
+    <script src="js/weatherDetails.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/openMap.js"></script>
   </body>
 </html>
