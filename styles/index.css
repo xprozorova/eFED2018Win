@@ -33,7 +33,6 @@ img{
     background-color: #f5f5f5;
     color: black;
 }
-/*---------------------------------------POLLUTION-----------------------------------*/
 .pollution, .weather{
     background-color: #f5f5f5;
     overflow: hidden;
@@ -56,115 +55,6 @@ input{
     background: white;
     padding-left: 15px;  
 }
-/*----------------------------------------CHARACT-----------------------------*/
-.commcharact{
-    width: 35%;
-    height: 20%;
-    top: 50px;
-    float: left;
-    margin: 0 15px 15px 0;
-}
-#place, #day, #sky, #preciptation, #humidity, #wind_speed{
-    height: 30%;
-    padding-left: 30px;
-    font-size: 23px;
-    display: block;
-    color: #696969;
-}
-.widecharact{
-    margin-left: 63%;
-    float: left;
-    margin: 0 15px 15px 0;
-    width: 60%;
-    height: 20%;
-}
-/*------------------------------------fFFFFff------------------------*/
-.images{
-    width: 30%;
-    height: 20%;
-    top: 50px;
-    float: left;
-    padding-left: 30px;
-}
-#left-temp{
-    width: 85%;
-    height: 60%
-}
-#clouds{
-    display: inline-block;
-    width: 100px;
-    margin: 0 15px 15px 0;   
-    vertical-align: middle;
-}
-#temp{
-    font-size: 40px;
-    color: #696969;
-}
-.navigate{
-    margin-left: 40%;
-    float: right;
-    margin: 20px;
-    width: 60%;
-    height: 10%;
-    padding-top: 20px;
-}
-.navigate button{
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-#floatpanel, #floatpanel2,#floatpanel3, .weatherblock{
-    width: 100%;
-    height: 20%;
-    float: left;
-}
-.hidden-panel{
-    visibility: hidden;
-}
-
-#h3{
-	top	: 200px;
-	left: 0;
-    width  : 10%;
-    float: left;
-    align-content: center;
-    
-}
-.weatherblock{
-    display: table;
-    max-width: 100%;
-}
-.ya{
-    display: table-row;
-   
-}
-.yacell{
-    display: table-cell;
-    
-}
-
-#ratata{
-    display: block;
-    text-align: center;
-}
-#re{
-    display: block;
-    width: 60%;
-    padding: 0 auto;
-}
-#max{
-    display: block;
-    float: left;
-    width: 50px;
-    
-}
-#min{
-    display: inline-block;
-    padding-bottom: none;
-}
-/*-----------------------------------------INDEXHTML-----------------------------------------*/
 #indexhead{
     display: inline-block;
     margin: 0 auto;
@@ -179,6 +69,7 @@ input{
 #indexhead{
     margin: 0 auto;
 }
+
 .itable {
     margin-left: 20px;
     display: table;
@@ -186,25 +77,65 @@ input{
     width: 95%;
 }
 .table-row-1 {
-    display: table-row;    
+    display: none;    
     width: 500px;
 }
 .table-cell-1 {
-    display: table-cell;
+    display: none;
     border: 1px solid black;
     width: 20%;
     text-align: center;
     font-size: 12px;
 }
-.table-row-2, .table-row-6{
-    display: table-row;  
+.table-cell-2{
+    border: 1px solid black;
+    font-size: 11px;
+    display: none;
 }
-.table-cell-2, .table-cell-6{
+.table-cell-6{
     display: table-cell;
     border: 1px solid black;
     width: 20%;
     height: 80px; 
     font-size: 11px;
+}
+.table-row-6{
+    display: table-row;  
+}
+.table-row-2{
+    margin: 0 20px;
+}
+#next, #prev{
+    font-size: 30px;
+    display: block;
+    float:left;
+    padding-top: 5%;
+    cursor: pointer;
+}
+#prev{   
+    margin-left: 200px;
+}
+#next{
+    margin-right: 20px;
+}
+.active1{
+    position: relative;
+    display: block;
+    float: left;
+    align-content: center;
+    height: 100px;
+    width: 45%;
+    margin: 0 auto;
+}
+.active{
+    background-color: gray;
+}
+.weekdays{
+    margin-left: 300px;
+}
+.table-row-3{
+    margin-top: 20px;
+    border-top: 1px solid black;
 }
 .table-row-3, .table-row-5{
     text-align: center;
@@ -233,14 +164,12 @@ input{
     height: 40px; 
 }
 #am-pm{
-    display: block;
-    float: left;
-    width: 15%;
-    margin: 7px 7px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 20px;
 }
 #ks{
-    display: table-row;
-    padding-top: 40px;
+    display: block;
 }
 #tableicon{
     display: block;
@@ -296,6 +225,9 @@ figure{
     display: table-cell;
     list-style: none;
 }
+#day-one-weekday{
+    cursor: pointer;
+}
 
 #day-statistic{
     display: block;
@@ -305,31 +237,8 @@ figure{
 #large{
     padding-left: 100px;
 }
-/*--------------------------------------HR---------------------------------*/
-#hr-table{
-    margin-top: 40px;
-    display: table;
-    width: 1000px;
-    height: 300px;
-}
-.hr-table{
-    display: table-row;
-    width: 500px;
-    border: 1px solid gray;
-}
-#mounths1, #common-max1, #common-min1, #record-max1, #record-min1{
-    display: table-cell;
-    width: 50px;
-    vertical-align: middle;
-    padding-left: 10px;
-    background-color: #dcdcdc;
-}
-#mounths2, #common-max2, #common-min2, #record-max2, #record-min2{
-    display: table-cell;
-    width: 50px;
-    vertical-align: middle;
-    padding-left: 10px;
-    background-color: white;
+.days{
+    height: 110px;
 }
 /*-------------------------------------FOOTER--------------------------------*/
 footer{
