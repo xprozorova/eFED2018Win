@@ -1,4 +1,3 @@
-
 var slideIndex = 0;
 
 function currentSlide(n){
@@ -23,7 +22,6 @@ function showSlides(n){
     for (i=0; i<buttons.length; i++){
         buttons[i].className = buttons[i].className.replace("panel-active", "");     
     }
-    slides[slideIndex-1].style.display = "block";
-    buttons[slideIndex-1].className.add("panel-active");   
+    slides[slideIndex-1].style.display = "block"; 
 }
 

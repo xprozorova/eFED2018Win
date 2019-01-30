@@ -1,4 +1,3 @@
-
 var slideIndex = 0;
 var slides = document.getElementsByClassName("table-cell-2");
 var buttons = document.getElementsByClassName("one-weekday");
