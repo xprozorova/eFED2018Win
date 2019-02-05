@@ -10,6 +10,7 @@ const page = {
         this.getWeatherDetails(defaultCity, this.render);
         //this.getPollution(defaultCoordinates, this.renderPollution);
         this.getFiveDaysDetails(defaultCity, this.renderFiveDays);
+        this.getSliderDetails(defaultCity, this.renderSliderDetails);
 
         this.getSliderDetails(defaultCity, this.renderSliderDetails);
 
@@ -80,7 +81,6 @@ const page = {
     },
     
     renderFiveDays(data) {
-
         function getDayInfo(data) {
          const objArray = {};
          const dataList = data.list;
@@ -96,9 +96,11 @@ const page = {
                 objArray[today] = [];
                 objArray[today].push(dataList[i]);
             }
+
         }
         return objArray;
         }
+
 
         const mapper = getDayInfo(data);
         const oneDayInfo = document.querySelectorAll(".yacell");
