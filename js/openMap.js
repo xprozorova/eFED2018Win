@@ -12,6 +12,9 @@ const page = {
         this.getFiveDaysDetails(defaultCity, this.renderFiveDays);
         this.getSliderDetails(defaultCity, this.renderSliderDetails);
 
+        this.getSliderDetails(defaultCity, this.renderSliderDetails);
+
+
         const searchField = document.getElementById('search');
         searchField.addEventListener('change', (event) => {
             const city = event.target.value;
@@ -38,10 +41,12 @@ const page = {
         const url = `${FIVE_DAYS}${city}`;
         this.request(url, callback);
     },
+
     getSliderDetails(city, callback){
         const url = `${FIVE_DAYS}${city}`;
         this.request(url, callback);
     },
+
     // getPollution(city, callback) {
     //     getWeatherDetails(city, callback);
     //     const url = `${POLLUTION}`;
@@ -52,7 +57,9 @@ const page = {
     //   
     //},
     render(data) {
+
         let icon = data.weather[0].icon;
+
         document.getElementById('city').innerHTML = data.name +', ' +data.sys.country;
         document.getElementById('temp').innerHTML = `${data.main.temp^0}°C`;
         document.getElementById('preciptation').innerHTML = `Вероятность осадков: ${(data.main.pressure * 0.750062)^0} мм`;
@@ -60,7 +67,9 @@ const page = {
         document.getElementById('wind-speed').innerHTML = `Ветер: ${Math.round(data.wind.speed)} м/с`;
         document.getElementById('humidity').innerHTML = `Влажность: ${data.main.humidity}%`;
         document.getElementById('day').innerHTML = new Date(data.dt*1000).toLocaleString("ru-RU", {weekday: 'long'});
+
         document.getElementById('left-temp').src = `http://openweathermap.org/img/w/${icon}.png`;
+
         
 
         //sunrise: new Date(data.sys.sunrise * 1000),
@@ -87,9 +96,11 @@ const page = {
                 objArray[today] = [];
                 objArray[today].push(dataList[i]);
             }
+
         }
         return objArray;
         }
+
 
         const mapper = getDayInfo(data);
         const oneDayInfo = document.querySelectorAll(".yacell");

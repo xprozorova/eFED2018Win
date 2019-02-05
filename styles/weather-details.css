@@ -12,8 +12,10 @@ img{
     max-width: 100%;
     height: 60px;
 }
+
 /* ----------------------TOPNAV----------------------------- */
 .topnav{
+
     background-color: #dcdcdc;
     overflow: hidden; 
     width: 100%  
