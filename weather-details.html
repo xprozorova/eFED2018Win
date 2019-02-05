@@ -7,12 +7,11 @@
     <title>Today weather forecast</title>
     <link rel="stylesheet" href="styles/weather-details.css"></linkrel>
   </head>
-
   <body>
-    <header class="topnav">
-        <a class="active" href="weather-details.html">СЕГОДНЯ</a>
-        <a href="index.html">5 ДНЕЙ</a>
-        <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
+    <header class="top-navigation">
+      <a class="active" href="weather-details.html">СЕГОДНЯ</a>
+      <a href="index.html">5 ДНЕЙ</a>
+      <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
     </header>
     <article class="pollution">
       Загрязнение воздуха:
@@ -23,16 +22,21 @@
     <section class="current-charact">
       <span id="city"></span>
       <span id="day"></span>
-      <span id="sky">gjj</span>
+      <span id="sky"></span>
     </section>
-
     <section class="prec-hum-wind">
       <span id="preciptation"></span>
       <span id="humidity"></span>
       <span id="wind-speed"></span>
     </section>
     <section class="images">
-      <span id="clouds"><img id="left-temp" src='assets/new/cloudy.png' alt='облачно'></span>
+      <span id="clouds">
+        <img
+          id="left-temp"
+          src='assets/new/cloudy.png'
+          alt='облачно'>
+        </img>
+      </span>
       <span id="temp">&#8451;</span>
     </section>
     <nav class="navigate">
@@ -40,7 +44,6 @@
      <button id="buttonprec" class="panel" onclick="currentSlide(2)">Вероятность выпадения осадков</button>
      <button id="buttonwind" class="panel" onclick="currentSlide(3)">Ветер</button>
     </nav>
-
     <ul id="slider">
       <li class="slide active"> <!--ТЕМПЕРАТУРА-->
         <section class="inset active-tab">
@@ -50,57 +53,48 @@
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>    
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>    
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>    
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>   
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>    
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>    
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>   
               <div class="slide-temp">
                 <div class="slide-temp-degrees-plus"></div>
                 <div class="slide-temp-prop">14</div>
                 <div class="slide-temp-degrees-minus"></div>
-              </div>
-    
+              </div>    
             </div>
           </div>
         </section>
       </li>
       <li class="slide">
           <div id="rainfall-percentage">
-
               <div class="rainfall-level"></div>
             </div>
             <div class="rainfall-percentage__rainfall-level">
@@ -180,7 +174,6 @@
             </div>
             <div class="rainfall-percentage__rainfall-level">
               <div class="rainfall-level"></div>
-
             </div>  
           </div>                 
       </li>
@@ -188,68 +181,49 @@
         <div class="slide-wind">
           <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">7 м/с</div>
           </div>
-
           <div class="slide-wind__wind-speed">
             <div class="wind-320-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">5 м/с</div>
         </div>
-
           <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">5 м/с</div>
           </div>
-
           <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">5 м/с</div>
           </div>
         <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">6 м/с</div>
         </div>
           <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">6 м/с</div>
           </div>
           <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">6 м/с</div>
           </div>
           <div class="slide-wind__wind-speed">
             <div class="wind-degrees">
-
                 <img src="assets/new/arrow.png" width="40px">
-
             </div>
             <div class="wind-speed">5 м/с</div>
           </div>
@@ -265,43 +239,40 @@
       <div class="time-of-day">8:00</div>
       <div class="time-of-day">11:00</div>
       <div class="time-of-day">14:00</div>
-  </div>
-  <br>
+    </div>
+    <br>
     <section id="weatherblock" title="такая-то температура">
-      <ul class="ya">
-        <li class="yacell yacell-active">
-          <span id="ratata">пн</span>
-
+      <ul class="five-day-block">
+        <li class="five-day-one">
+          <span id="day-name">пн</span>
           <img class="re" src="assets/new/cloudy.png" alt="img">
             <span id="daily">daily</span>
         </li>
-        <li class="yacell">
-          <span id="ratata">вт</span>
+        <li class="five-day-one">
+          <span id="day-name">вт</span>
           <img class="re" src="assets/new/partly_cloudy.png" alt="img">
             <span id="daily">daily</span>
         </li>
-        <li class="yacell">
-          <span id="ratata">ср</span>
+        <li class="five-day-one">
+          <span id="day-name">ср</span>
           <img class="re" src="assets/new/heavy_rain.png" alt="img">
             <span id="daily">daily</span>
         </li>
-        <li class="yacell">
-          <span id="ratata">чт</span>
+        <li class="five-day-one">
+          <span id="day-name">чт</span>
           <img class="re" src="assets/new/heavy_rain.png" alt="img">
             <span id="daily">daily</span>
         </li>
-        <li class="yacell">
-          <span id="ratata">пт</span>
+        <li class="five-day-one">
+          <span id="day-name">пт</span>
            <img class="re" src="assets/new/rain_sun.png" alt="img">
              <span id="daily">daily</span>
         </li>
-        <li class="yacell">
-          <span id="ratata">сб</span>
+        <li class="five-day-one">
+          <span id="day-name">сб</span>
           <img class="re" src="assets/new/rain_sun.png" alt="img">
             <span id="daily">daily</span>
-
-        </li>
-       
+        </li>      
       </ul>
     </section>
     <footer>

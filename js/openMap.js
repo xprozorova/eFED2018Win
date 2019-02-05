@@ -1,8 +1,8 @@
-const API_ID = 'cbb3210df49fdf1c3c675a785e42454b';
-const defaultCity = 'izhevsk';
-const defaultCoordinates = '56,53';
-const WEATHER_DETAILS = `http://api.openweathermap.org/data/2.5/weather?lang=RU&mode=json&units=metric&APPID=${ API_ID }&q=`;
-const FIVE_DAYS = `http://api.openweathermap.org/data/2.5/forecast?lang=RU&mode=json&units=metric&APPID=${ API_ID }&q=`;
+const API_ID = "cbb3210df49fdf1c3c675a785e42454b";
+const defaultCity = "izhevsk";
+const defaultCoordinates = "56,53";
+const WEATHER_DETAILS = `http://api.openweathermap.org/data/2.5/weather?lang=RU&mode=json&units=metric&APPID=${API_ID}&q=`;
+const FIVE_DAYS = `http://api.openweathermap.org/data/2.5/forecast?lang=RU&mode=json&units=metric&APPID=${API_ID}&q=`;
 //const POLLUTION =`http://api.openweathermap.org/pollution/v1/co/${defaultCoordinates}/current.json?appid=${ API_ID }`;
 
 const page = {
@@ -14,8 +14,8 @@ const page = {
         this.getSliderDetails(defaultCity, this.renderSliderDetails);
 
 
-        const searchField = document.getElementById('search');
-        searchField.addEventListener('change', (event) => {
+        const searchField = document.getElementById("search");
+        searchField.addEventListener("change", (event) => {
             const city = event.target.value;
             this.getWeatherDetails(city, this.render);
             this.getFiveDaysDetails(city, this.renderFiveDays);
@@ -28,8 +28,8 @@ const page = {
                 console.log(JSON.parse(xhr.responseText));
                 callback(JSON.parse(xhr.responseText));
             }
-        }
-        xhr.open('GET', url, true);
+        };
+        xhr.open("GET", url, true);
         xhr.send();
     },
     getWeatherDetails(city, callback) {
@@ -56,21 +56,15 @@ const page = {
     //   
     //},
     render(data) {
-
         let icon = data.weather[0].icon;
-
-        document.getElementById('city').innerHTML = data.name +', ' +data.sys.country;
-        document.getElementById('temp').innerHTML = `${data.main.temp^0}°C`;
-        document.getElementById('preciptation').innerHTML = `Вероятность осадков: ${(data.main.pressure * 0.750062)^0} мм`;
-        document.getElementById('sky').innerHTML = data.weather[0].description;
-        document.getElementById('wind-speed').innerHTML = `Ветер: ${Math.round(data.wind.speed)} м/с`;
-        document.getElementById('humidity').innerHTML = `Влажность: ${data.main.humidity}%`;
-        document.getElementById('day').innerHTML = new Date(data.dt*1000).toLocaleString("ru-RU", {weekday: 'long'});
-
+        document.getElementById("city").innerHTML = data.name +", "+data.sys.country;
+        document.getElementById("temp").innerHTML = `${data.main.temp^0}°C`;
+        document.getElementById("preciptation").innerHTML = `Вероятность осадков: ${(data.main.pressure * 0.750062)^0} мм`;
+        document.getElementById("sky").innerHTML = data.weather[0].description;
+        document.getElementById("wind-speed").innerHTML = `Ветер: ${Math.round(data.wind.speed)} м/с`;
+        document.getElementById("humidity").innerHTML = `Влажность: ${data.main.humidity}%`;
+        document.getElementById("day").innerHTML = new Date(data.dt*1000).toLocaleString("ru-RU", {weekday: "long"});
         document.getElementById('left-temp').src = `http://openweathermap.org/img/w/${icon}.png`;
-
-        
-
         //sunrise: new Date(data.sys.sunrise * 1000),
         //sunset: new Date(data.sys.sunset * 1000),
         //wind: `${data.wind.speed^0}m/s`,
@@ -80,14 +74,13 @@ const page = {
     },
     
     renderFiveDays(data) {
-
         function getDayInfo(data) {
          const objArray = {};
          const dataList = data.list;
 
-        for(let i = 0; i < dataList.length; i++) {
+         for(let i = 0; i < dataList.length; i++) {
             const todayData = new Date(dataList[i].dt * 1000);
-            const today = todayData.toLocaleString("ru", {weekday: 'short'});
+            const today = todayData.toLocaleString("ru", {weekday: "short"});
 
             if (today in objArray) {
                 objArray[today].push(dataList[i]);
@@ -101,7 +94,7 @@ const page = {
         }
 
         const mapper = getDayInfo(data);
-        const oneDayInfo = document.querySelectorAll(".yacell");
+        const oneDayInfo = document.querySelectorAll(".five-day-one");
 
         let blockIndex = 0;
         for (today in mapper) {
