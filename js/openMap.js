@@ -9,12 +9,7 @@ const page = {
     init() {
         this.getWeatherDetails(defaultCity, this.render);
         //this.getPollution(defaultCoordinates, this.renderPollution);
-<<<<<<< HEAD
         this.getFiveDaysDetails(defaultCity, this.renderFiveDays.bind(this));
-=======
-        this.getFiveDaysDetails(defaultCity, this.renderFiveDays);
-        this.getSliderDetails(defaultCity, this.renderSliderDetails);
->>>>>>> dbfab5d3539870603ea3fbadb928acb4896b2ec4
 
         this.getSliderDetails(defaultCity, this.renderSliderDetails);
 
@@ -98,16 +93,11 @@ const page = {
 
         }
 
-<<<<<<< HEAD
         return day_info_array;
     },
     
     renderFiveDays(data) {
         const mapper = this.getDayInfo(data);
-=======
-
-        const mapper = getDayInfo(data);
->>>>>>> dbfab5d3539870603ea3fbadb928acb4896b2ec4
         const oneDayInfo = document.querySelectorAll(".five-day-one");
         let blockIndex = 0;
 
