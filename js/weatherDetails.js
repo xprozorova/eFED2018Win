@@ -1,13 +1,13 @@
 var slideIndex = 0;
 
-function showSlides(n){
+function showSlides(currentSlideIndex){
     var i;
     var slides = document.getElementsByClassName("slide");
     var buttons = document.getElementsByClassName("panel");
-    if (n > slides.length){
+    if (currentSlideIndex > slides.length){
         slideIndex = 1;
     }
-    if (n < 1){
+    if (currentSlideIndex < 1){
         slideIndex=slides.length;
     }
     for (i=0; i<slides.length; i+=1){
@@ -18,6 +18,6 @@ function showSlides(n){
     }
     slides[slideIndex-1].style.display = "block";
 }
-function currentSlide(n){
-    showSlides(slideIndex = n);
+function currentSlide(currentSlideIndex){
+    showSlides(slideIndex = currentSlideIndex);
 }

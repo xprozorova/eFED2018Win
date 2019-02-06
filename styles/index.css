@@ -119,7 +119,7 @@ input{
 #next{
     margin-right: 20px;
 }
-.active1{
+.days-weather-cell-active{
     position: relative;
     display: block;
     float: left;
@@ -128,7 +128,7 @@ input{
     width: 45%;
     margin: 0 auto;
 }
-.active{
+.one-weekday-active{
     background-color: gray;
 }
 .weekdays{
