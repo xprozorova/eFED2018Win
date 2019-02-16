@@ -114,7 +114,7 @@ const page = {
 
             oneOfSixDays[0].innerHTML = TODAY;
             oneOfSixDays[1].src = `http://openweathermap.org/img/w/${icon}.png`;
-            oneOfSixDays[2].innerHTML = `${minTemperature}° ${maxTemperature}°`;
+            oneOfSixDays[2].innerHTML = `${minTemperature}°   ${maxTemperature}°`;
             blockIndex++;
         }
 

@@ -4,281 +4,275 @@
     <meta charset="UTF-8">
     <meta name="description" content="Погода в городе Ижевск">
     <meta name="author" content="Прозорова Ксения">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today weather forecast</title>
     <link rel="stylesheet" href="styles/weather-details.css"></linkrel>
   </head>
   <body>
-    <header class="top-navigation">
-      <a class="active" href="weather-details.html">СЕГОДНЯ</a>
-      <a href="index.html">5 ДНЕЙ</a>
-      <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
-    </header>
-    <article class="pollution">
-      Загрязнение воздуха:
-      <input id="search" type="text" name="searcharea" placeholder="Search">
-    </article>
-    <br>
-    <br>
-    <section class="current-charact">
-      <span id="city"></span>
-      <span id="day"></span>
-      <span id="sky"></span>
-    </section>
-    <section class="prec-hum-wind">
-      <span id="preciptation"></span>
-      <span id="humidity"></span>
-      <span id="wind-speed"></span>
-    </section>
-    <section class="images">
-      <span id="clouds">
-        <img
-          id="left-temp"
-          src='assets/new/cloudy.png'
-          alt='облачно'>
-        </img>
-      </span>
-      <span id="temp">&#8451;</span>
-    </section>
-    <nav class="navigate">
-     <button id="buttontemp" class="panel panel-active" onclick="currentSlide(1)" >Температура</button>
-     <button id="buttonprec" class="panel" onclick="currentSlide(2)">Вероятность выпадения осадков</button>
-     <button id="buttonwind" class="panel" onclick="currentSlide(3)">Ветер</button>
-    </nav>
-    <ul id="slider">
-      <li class="slide active"> <!--ТЕМПЕРАТУРА-->
-        <section class="inset active-tab">
-          <div id="slide-temp-graphic">
-            <div class="slide-temp-date">
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>    
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>    
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>    
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>   
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>    
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>    
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>   
-              <div class="slide-temp">
-                <div class="slide-temp-degrees-plus"></div>
-                <div class="slide-temp-prop">14</div>
-                <div class="slide-temp-degrees-minus"></div>
-              </div>    
-            </div>
-          </div>
+    <div id='wrapper'>
+      <header class="top-navigation">
+        <a class="active" href="weather-details.html">СЕГОДНЯ</a>
+        <a href="index.html">5 ДНЕЙ</a>
+        <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
+      </header>
+      <article class="pollution">
+        <span>Загрязнение воздуха: 3,046893927234</span>
+        <input id="search" type="text" name="searcharea" placeholder="Search">
+      </article>
+      <br>
+      <br>
+      <section class="current-charact">
+        <span id="city"></span>
+        <span id="day"></span>
+        <span id="sky"></span>
+        <section class="images">
+            <img
+              id="left-temp"
+              src='assets/new/cloudy.png'
+              alt='облачно'>
+            </img>
+          <span id="temp">&#8451;</span>
         </section>
-      </li>
-      <li class="slide">
-          <div id="rainfall-percentage">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">24%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">30%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">24%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">8%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div> 
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">24%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-            <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">30%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-              <div class="prec-value">24%</div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level">
+      </section>
+      <section class="prec-hum-wind">
+        <span id="preciptation"></span>
+        <span id="humidity"></span>
+        <span id="wind-speed"></span>
+        <nav class="navigate">
+          <button id="buttontemp" class="panel panel-active" onclick="currentSlide(1)" >Температура</button>
+          <button id="buttonprec" class="panel" onclick="currentSlide(2)">Вероятность выпадения осадков</button>
+          <button id="buttonwind" class="panel" onclick="currentSlide(3)">Ветер</button>
+        </nav>
+      </section>
+      <ul id="slider">
+        <li class="slide active"> <!--ТЕМПЕРАТУРА-->
+          <section class="inset active-tab">
+            <div id="slide-temp-graphic">
+              <div class="slide-temp-date">
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>    
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>    
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>    
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>   
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>    
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>    
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>   
+                <div class="slide-temp">
+                  <div class="slide-temp-degrees-plus"></div>
+                  <div class="slide-temp-prop">14</div>
+                  <div class="slide-temp-degrees-minus"></div>
+                </div>    
               </div>
+            </div>
+          </section>
+        </li>
+        <li class="slide">
+            <div id="rainfall-percentage">
+                <div class="rainfall-level"></div>
               </div>
-            <div class="rainfall-percentage__rainfall-level">
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">24%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">30%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">24%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">8%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div> 
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">24%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
               <div class="rainfall-level"></div>
-              <div class="prec-value">8%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">30%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">24%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level">
+                </div>
+                </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+                <div class="prec-value">8%</div>
+              </div>
+              <div class="rainfall-percentage__rainfall-level">
+                <div class="rainfall-level"></div>
+              </div>                
+        </li>
+        <li class="slide">
+          <div class="slide-wind">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">7 м/с</div>
             </div>
-            <div class="rainfall-percentage__rainfall-level">
-              <div class="rainfall-level"></div>
-            </div>  
-          </div>                 
-      </li>
-      <li class="slide">
-        <div class="slide-wind">
-          <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-320-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">5 м/с</div>
             </div>
-            <div class="wind-speed">7 м/с</div>
-          </div>
-          <div class="slide-wind__wind-speed">
-            <div class="wind-320-degrees">
-                <img src="assets/new/arrow.png" width="40px">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">5 м/с</div>
             </div>
-            <div class="wind-speed">5 м/с</div>
-        </div>
-          <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">5 м/с</div>
             </div>
-            <div class="wind-speed">5 м/с</div>
-          </div>
-          <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">6 м/с</div>
             </div>
-            <div class="wind-speed">5 м/с</div>
-          </div>
-        <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">6 м/с</div>
             </div>
-            <div class="wind-speed">6 м/с</div>
-        </div>
-          <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">6 м/с</div>
             </div>
-            <div class="wind-speed">6 м/с</div>
-          </div>
-          <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
-            </div>
-            <div class="wind-speed">6 м/с</div>
-          </div>
-          <div class="slide-wind__wind-speed">
-            <div class="wind-degrees">
-                <img src="assets/new/arrow.png" width="40px">
-            </div>
-            <div class="wind-speed">5 м/с</div>
-          </div>
-        </div>
-      </li>
-    </ul>  
-    <div class="time-row">
-      <div class="time-of-day">17:00</div>
-      <div class="time-of-day">20:00</div>
-      <div class="time-of-day">23:00</div>
-      <div class="time-of-day">2:00</div>
-      <div class="time-of-day">5:00</div>
-      <div class="time-of-day">8:00</div>
-      <div class="time-of-day">11:00</div>
-      <div class="time-of-day">14:00</div>
+            <div class="slide-wind__wind-speed">
+              <div class="wind-degrees">
+                  <img src="assets/new/arrow.png" width="40px">
+              </div>
+              <div class="wind-speed">5 м/с</div>
+            </div>         
+        </li>
+      </ul>  
+      <div class="time-row">
+        <div class="time-of-day">17:00</div>
+        <div class="time-of-day">20:00</div>
+        <div class="time-of-day">23:00</div>
+        <div class="time-of-day">2:00</div>
+        <div class="time-of-day">5:00</div>
+        <div class="time-of-day">8:00</div>
+        <div class="time-of-day">11:00</div>
+        <div class="time-of-day">14:00</div>
+      </div>
+      <br>
+      <section id="weatherblock">
+        <ul class="five-day-block">
+          <li class="five-day-one">
+            <span id="day-name">пн</span>
+            <img class="re" src="assets/new/cloudy.png" alt="img">
+              <span id="daily">daily</span>
+          </li>
+          <li class="five-day-one">
+            <span id="day-name">вт</span>
+            <img class="re" src="assets/new/partly_cloudy.png" alt="img">
+              <span id="daily">daily</span>
+          </li>
+          <li class="five-day-one">
+            <span id="day-name">ср</span>
+            <img class="re" src="assets/new/heavy_rain.png" alt="img">
+              <span id="daily">daily</span>
+          </li>
+          <li class="five-day-one">
+            <span id="day-name">чт</span>
+            <img class="re" src="assets/new/heavy_rain.png" alt="img">
+              <span id="daily">daily</span>
+          </li>
+          <li class="five-day-one">
+            <span id="day-name">пт</span>
+            <img class="re" src="assets/new/rain_sun.png" alt="img">
+              <span id="daily">daily</span>
+          </li>     
+        </ul>
+      </section>
+      <footer>
+        2018 &copy; Copyright
+      </footer>
+      <script src="js/weatherDetails.js" type="text/javascript"></script>
+      <script type="text/javascript" src="js/openMap.js"></script>
     </div>
-    <br>
-    <section id="weatherblock" title="такая-то температура">
-      <ul class="five-day-block">
-        <li class="five-day-one">
-          <span id="day-name">пн</span>
-          <img class="re" src="assets/new/cloudy.png" alt="img">
-            <span id="daily">daily</span>
-        </li>
-        <li class="five-day-one">
-          <span id="day-name">вт</span>
-          <img class="re" src="assets/new/partly_cloudy.png" alt="img">
-            <span id="daily">daily</span>
-        </li>
-        <li class="five-day-one">
-          <span id="day-name">ср</span>
-          <img class="re" src="assets/new/heavy_rain.png" alt="img">
-            <span id="daily">daily</span>
-        </li>
-        <li class="five-day-one">
-          <span id="day-name">чт</span>
-          <img class="re" src="assets/new/heavy_rain.png" alt="img">
-            <span id="daily">daily</span>
-        </li>
-        <li class="five-day-one">
-          <span id="day-name">пт</span>
-           <img class="re" src="assets/new/rain_sun.png" alt="img">
-             <span id="daily">daily</span>
-        </li>
-        <li class="five-day-one">
-          <span id="day-name">сб</span>
-          <img class="re" src="assets/new/rain_sun.png" alt="img">
-            <span id="daily">daily</span>
-        </li>      
-      </ul>
-    </section>
-    <footer>
-      2018 &copy; Copyright
-    </footer>
-    <script src="js/weatherDetails.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/openMap.js"></script>
   </body>
 </html>

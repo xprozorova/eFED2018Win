@@ -3,27 +3,41 @@
     padding: 0;
 }
 
-html, body{
-    height: 100%;
-    width: 800px;
+html{
+    width: 100%;
+
+}
+body{
+    width: 100%;
+    background: #dcdcdc;
 }
 img{
     width: 60px;
     max-width: 100%;
     height: 60px;
 }
+#wrapper{
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid gray;
+    background: #ffffff;
+    flex-flow: row wrap;
+    position: relative;
+    height: 670px;
+}
 
 /* ----------------------top-navigation----------------------------- */
 .top-navigation{
-
     background-color: #dcdcdc;
     overflow: hidden; 
-    width: 100%  
+    width: 100%;
+    display: flex;  
 }
 
 .top-navigation a{
-
-    float: left;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     color: black;
     text-align: center;
     padding: 14px 16px;
@@ -41,8 +55,11 @@ img{
 .pollution, .weather{
     background-color: #f5f5f5;
     overflow: hidden;
-    height: 20px;
     padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height:50px;
 }
 #search{
     border: 2 px;
@@ -52,7 +69,7 @@ img{
     margin: 0 auto;
 }
 input{
-    border: 2px solid #dcdcdc;
+    border: 1px solid #dcdcdc;
     outline: none;
     border-radius: 6px;
     width: 100%;
@@ -64,7 +81,7 @@ input{
 /*----------------------------------------CHARACT-----------------------------*/
 .current-charact{
     width: 35%;
-    height: 20%;
+    height: 30%;
     top: 50px;
     float: left;
     margin: 0 15px 15px 0;
@@ -92,50 +109,36 @@ input{
 }
 /*------------------------------------fFFFFff------------------------*/
 .images{
-    width: 30%;
-    height: 20%;
-    top: 50px;
-    float: left;
+    display: flex;
     padding-left: 30px;
 }
 #left-temp{
-    width: 85%;
-    height: 60%
+    width: 20%;
+    height: 20%;
 }
 #clouds{
-    display: inline-block;
     width: 100px;
     margin: 0 15px 15px 0;   
     vertical-align: middle;
 }
 #temp{
-    font-size: 40px;
+    font-size: 20px;
     color: #696969;
 }
 .navigate{
     margin-left: 40%;
-    float: right;
+    display: flex;
     margin: 20px;
-    width: 60%;
-    height: 10%;
+    width: 100%;
+    height: 5%;
     padding-top: 20px;
 }
 .navigate button{
-    float: left;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-#floatpanel, #floatpanel2,#floatpanel3, #weatherblock{
-    width: 100%;
-    height: 20%;
-    float: left;
-}
-.hidden-panel{
-    visibility: hidden;
-}
-
 #h3{
 	top	: 200px;
 	left: 0;
@@ -144,24 +147,17 @@ input{
     align-content: center;
     
 }
-#weatherblock{
-    display: table;
-    max-width: 100%;
-    margin: 0 20px;
-}
 .five-day-block{
-    display: inline-block;
-    margin: 0 auto;
-   
+    display: flex;
+    margin: 5% auto;
+    justify-content: space-around;
+    flex-wrap: nowrap;
 }
 .five-day-one{
-    display: inline-block;
-    max-width: 65px;
-    margin-left: 15px;
-    margin-right: 15px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 #day-name{
     display: block;
     text-align: center;
@@ -181,6 +177,10 @@ input{
 #min{
     display: inline-block;
     padding-bottom: none;
+}
+#daily{
+    display: flex;
+    justify-content: space-around;
 }
 /*---------------------------SLIDER----------------*/
 
@@ -207,15 +207,7 @@ li{
 	display: flex;
     justify-content: space-around;
     color: gray;
-}
-.inset {
-    color: black;
-	display: flex;
-    flex-wrap: wrap;
-	padding-left: 15px;
-	padding-right: 15px;
-	text-align: center;
-	display: none;
+    margin: 0 5%;
 }
 .panel-active{
     display: block;
@@ -266,15 +258,11 @@ li{
 	transform: rotate(320deg);
 }
 
-.wind-350-degrees {
-	transform: rotate(350deg);
-}
-
-.wind-20-degrees {
-	transform: rotate(20deg);
-}
-#rainfall-percentage {
-	display: flex;
+.rainfall-percentage {
+    display: flex;
+    flex-grow: 1;
+	min-width: 320px;
+	flex-flow: column;
 }
 
 .rainfall-percentage__rainfall-level {
@@ -284,82 +272,89 @@ li{
 	flex-direction: column-reverse;
 }
 
-.rainfall-level-15 {
+.rainfall-level, .prec-value {
 	height: 15px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-30 {
-	height: 30px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-10 {
-	height: 10px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-11 {
-	height: 11px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-9 {
-	height: 9px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-8 {
-	height: 8px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-.rainfall-level-44 {
-	height: 44px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-38 {
-	height: 38px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-37 {
-    height: 37px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-23 {
-	height: 23px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-6 {
-	height: 6px;
-	border-top: 3px solid blue;
-	background-color: dodgerblue;
-}
-
-.rainfall-level-0 {
-	height: 0px;
 	border-top: 3px solid blue;
 	background-color: dodgerblue;
 }
 /*-------------------------------------FOOTER--------------------------------*/
 footer{
     background-color: gray;
-    width: 800px;
+    width: 100%;
+    height: 20px;
     text-align: center;
-    position: fixed;
-    left: 0;
-    bottom:0;
+    bottom: 0;
+    position: absolute;
+}
+@media (max-width: 900px){
+    *{
+        font-size: 16px;
+    }
+    .five-day-block{
+        flex-wrap: wrap;
+    }
+    .five-day-one{
+        min-width: 315px;
+    }
+    #slider{
+        display: none;
+    }
+    .time-row{
+        display: none;
+    }
+    .navigate{
+        display: none;
+    }
+}
+@media screen and (max-width: 400px){
+    #wrapper{
+        height: 100%;
+    }
+    *{
+        font-size: 8px;
+    }
+    #day, #sky, #preciptation, #humidity, #wind-speed, #city, #country, #temp{
+        font-size: 10px;
+        margin: 0;
+        padding-left: 3px;
+    }
+    .current-charact{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .images{
+        padding-left: 0;
+        margin: 0;
+        width: 50%;
+    }
+    #clouds{
+        width: 10%;
+    }
+    .prec-hum-wind{
+        width: 90%;
+    }
+    input{
+        border: 1px solid #dcdcdc;
+        height: 15px; 
+    }
+    .top-navigation{
+        display: flex;
+        align-content: flex-start;
+        font-size: 8px;
+        height: 15px;
+    }
+    .top-navigation a{
+        font-size: 6px;
+        padding: 3px 6px;
+    }
+    footer{
+        height: 15px;
+    }
+    .five-day-block{
+        display: block;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        flex-flow: row wrap;
+    }
 }
