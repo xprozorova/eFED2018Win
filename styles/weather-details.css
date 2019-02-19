@@ -182,6 +182,10 @@ input{
     display: flex;
     justify-content: space-around;
 }
+#weatherblock{
+    display: block;
+    max-height: 500px;
+}
 /*---------------------------SLIDER----------------*/
 
 #slider{
@@ -308,19 +312,24 @@ footer{
 }
 @media screen and (max-width: 400px){
     #wrapper{
+        width: 100%;
         height: 100%;
     }
     *{
-        font-size: 8px;
+        font-size: 16px;
     }
-    #day, #sky, #preciptation, #humidity, #wind-speed, #city, #country, #temp{
-        font-size: 10px;
+    #day, #sky, #city, #country, #temp, #preciptation, #humidity, #wind-speed{
+        font-size: 26px;
         margin: 0;
-        padding-left: 3px;
+        padding-left: 5px;
     }
+    #city, #day, #sky, #temp{
+        color: black;
+    }
+    
     .current-charact{
         margin: 0;
-        padding: 0;
+        padding: 5px;
         width: 100%;
     }
     .images{
@@ -341,20 +350,22 @@ footer{
     .top-navigation{
         display: flex;
         align-content: flex-start;
-        font-size: 8px;
-        height: 15px;
+        font-size: 16px;
+        height: 30px;
     }
     .top-navigation a{
-        font-size: 6px;
+        font-size: 16px;
         padding: 3px 6px;
     }
     footer{
         height: 15px;
     }
     .five-day-block{
-        display: block;
+        display: inline-block;
         flex-wrap: wrap;
-        overflow-x: auto;
         flex-flow: row wrap;
+    }
+    .five-day-one{
+        display: flex;
     }
 }

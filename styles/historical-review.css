@@ -116,6 +116,7 @@ footer{
         position: relative;
         overflow-x: auto;
         overflow-y: hidden;
+        text-align: center;
     }
     #hr-table tr {
         display: flex;
@@ -129,10 +130,11 @@ footer{
 } 
 @media screen and (max-width: 500px){
     *{
-        font-size: 8px;
+        font-size: 16px;
     }
     #wrapper{
         height: 100%;
+        width: 100%;
     }
     input{
         border: 1px solid #dcdcdc;
@@ -142,10 +144,10 @@ footer{
         display: flex;
         align-content: flex-start;
         font-size: 8px;
-        height: 15px;
+        height: 20px;
     }
     .top-navigation a{
-        font-size: 6px;
+        font-size: 16px;
         padding: 3px 6px;
     }
     footer{
