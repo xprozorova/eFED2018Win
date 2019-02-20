@@ -30,12 +30,18 @@ const page = {
                 callback(JSON.parse(xhr.responseText));
             }
         };
+        //document.querySelector(".overlay").style.display = "none";
+        //document.querySelector(".preloader").style.display = "none";
+        //document.querySelector("#wrapper").style.background = "white";
 
         xhr.open("GET", url, true);
         xhr.send();
     },
 
     getWeatherDetails(city, callback) {
+        document.querySelector(".overlay").style.display = "block";
+        document.querySelector(".preloader").style.display = "block";
+        document.querySelector("#wrapper").style.background = "linear-gradient(90deg, gray 10%, #FFFFFF 90%)";
         const url = `${ WEATHER_DETAILS_URL }${ city }`;
         this.request(url, callback);
     },
@@ -116,6 +122,9 @@ const page = {
             oneOfSixDays[1].src = `http://openweathermap.org/img/w/${icon}.png`;
             oneOfSixDays[2].innerHTML = `${minTemperature}°   ${maxTemperature}°`;
             blockIndex++;
+            document.querySelector(".overlay").style.display = "none";
+            document.querySelector(".preloader").style.display = "none";
+            document.querySelector("#wrapper").style.background = "white";
         }
 
         function testFunction(val, temperature, temperatureType) {
