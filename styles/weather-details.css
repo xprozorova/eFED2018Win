@@ -2,10 +2,8 @@
     margin: 0;
     padding: 0;
 }
-
 html{
     width: 100%;
-
 }
 body{
     width: 100%;
@@ -405,15 +403,18 @@ footer{
         border: 1px solid #dcdcdc;
         height: 15px; 
     }
-    .top-navigation{
+    .top-navigation, .pollution{
         display: flex;
         align-content: flex-start;
         font-size: 16px;
+    }
+    .sticky-header{
         position: sticky;
+        top: 0; 
     }
     .top-navigation a{
         font-size: 16px;
-        padding: 3px 6px;
+        padding: 3px 6px;      
     }
     footer{
         height: 15px;
@@ -426,5 +427,9 @@ footer{
     }
     .five-day-one{
         display: flex;
+    }
+    #search{
+        margin-top: 3%;
+        width: 80%;
     }
 }

@@ -20,7 +20,9 @@ img{
     border: 1px solid gray;
     background: #FFFFFF;
     height: 670px;
+    flex-flow: row wrap;
     position: relative;
+    height: 100%;
 }
 /* ----------------------top-navigation----------------------------- */
 .top-navigation{
@@ -32,6 +34,8 @@ img{
 }
 .top-navigation a{
     display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap;
     color: black;
     padding: 0 16px;
     height: 3em;
@@ -45,12 +49,6 @@ img{
 .top-navigation a.active{
     background-color: #f5f5f5;
     color: black;
-}
-.pollution, .search-string{
-    background-color: #f5f5f5;
-    overflow: hidden;
-    height: 20px;
-    padding: 10px;
 }
 .search::before{
     content: "\1F50E";
@@ -273,16 +271,23 @@ footer{
         flex-wrap: wrap;
         display: flex;
     }
+    #search{
+        margin-top: 3%;
+        width: 80%;
+    }
     input{
         border: 1px solid #dcdcdc;
-        height: 15px; 
+        height: 15px;
     }
-    .top-navigation{
+    .sticky-header{
+        position: sticky;
+        z-index: 1;
+        top: 0;
+    }
+    .top-navigation, .search-string-info {
         display: flex;
         align-content: flex-start;
         font-size: 16px;
-        height: 20px;
-        position: sticky;
     }
     .top-navigation a{
         font-size: 16px;
@@ -330,6 +335,7 @@ footer{
         display: block;
     }
     footer{
+        height: 15px;
         position: sticky;
     }
 }
