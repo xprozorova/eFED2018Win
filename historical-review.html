@@ -2,105 +2,111 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical review</title>
     <link rel="stylesheet" href="styles/historical-review.css"></linkrel>
   </head>
   <body>
-    <header class="topnav">
-      <a class="active" href="weather-details.html">СЕГОДНЯ</a>
-      <a href="index.html">5 ДНЕЙ</a>
-      <a href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
-    </header>
-    <article class="weather">
-      <img id="upicon" src="assets/new/cloudy.png">
-      <span id="indexhead">
-        <span id="indextemp">22&#8451;</span>
-        <span id="indexplace">Ижевск, Россия</span> 
-      </span>
-    <form method="GET" action="">
-    <input type="search" name="searcharea" placeholder="Search">
-    <button type="submit"></button>
-    </form>
-  </article>
-    <section id="hr-table">
-      <ul class="hr-table">
-        <li id="mounths1"></li>
-        <li id="mounths2">Январь</li>
-        <li id="mounths1">Февраль</li>
-        <li id="mounths2">Март</li>
-        <li id="mounths1">Апрель</li>
-        <li id="mounths2">Май</li>
-        <li id="mounths1">Июнь</li>
-        <li id="mounths2">Июль</li>
-        <li id="mounths1">Август</li>
-        <li id="mounths2">Сентябрь</li>
-        <li id="mounths1">Октябрь</li>
-        <li id="mounths2">Ноябрь</li>
-        <li id="mounths1">Декабрь</li>
-      </ul>
-      <ul class="hr-table">
-        <li id="common-max2">Средний максимум</li>
-        <li id="common-max1"></li>
-        <li id="common-max2"></li>
-        <li id="common-max1"></li>
-        <li id="common-max2"></li>
-        <li id="common-max1"></li>
-        <li id="common-max2"></li>
-        <li id="common-max1"></li>
-        <li id="common-max2"></li>
-        <li id="common-max1"></li>
-        <li id="common-max2"></li>
-        <li id="common-max1"></li>
-        <li id="common-max2"></li>
-      </ul>
-      <ul class="hr-table">
-        <li id="common-min1">Средний минимум</li>
-        <li id="common-min2"></li>
-        <li id="common-min1"></li>
-        <li id="common-min2"></li>
-        <li id="common-min1"></li>
-        <li id="common-min2"></li>
-        <li id="common-min1"></li>
-        <li id="common-min2"></li>
-        <li id="common-min1"></li>
-        <li id="common-min2"></li>
-        <li id="common-min1"></li>
-        <li id="common-min2"></li>
-        <li id="common-min1"></li>
-      </ul>
-      <ul class="hr-table">
-        <li id="record-max2">Рекордный максимум</li>
-        <li id="record-max1"></li>
-        <li id="record-max2"></li>
-        <li id="record-max1"></li>
-        <li id="record-max2"></li>
-        <li id="record-max1"></li>
-        <li id="record-max2"></li>
-        <li id="record-max1"></li>
-        <li id="record-max2"></li>
-        <li id="record-max1"></li>
-        <li id="record-max2"></li>
-        <li id="record-max1"></li>
-        <li id="record-max2"></li>
-      </ul>
-      <ul class="hr-table">
-        <li id="record-min1">Рекордный минимум</li>
-        <li id="record-min2"></li>
-        <li id="record-min1"></li>
-        <li id="record-min2"></li>
-        <li id="record-min1"></li>
-        <li id="record-min2"></li>
-        <li id="record-min1"></li>
-        <li id="record-min2"></li>
-        <li id="record-min1"></li>
-        <li id="record-min2"></li>
-        <li id="record-min1"></li>
-        <li id="record-min2"></li>
-        <li id="record-min1"></li>
-      </ul>
-    </section>
-    <footer>
-      2018 &copy; Copyright
-    </footer>    
+    <div id='wrapper'>
+      <div class="sticky-header">
+        <header class="top-navigation">
+          <a href="weather-details.html">СЕГОДНЯ
+          <a href="index.html">5 ДНЕЙ
+          <a class="active" href="historical-review.html">ИСТОРИЯ ПОГОДЫ</a>
+        </header>
+        <article class="search-string-info">
+          <span>Ижевск, Россия, -22&#8451;</span>
+          <form class="search">
+            <input id="search" type="text" name="searcharea" placeholder="Search">
+          </form>
+        </article>
+      </div>
+      <div id="hr-table">
+        <table id="hr-table">
+          <thead>
+            <tr>
+              <th id="mounths1">Месяцы</th>
+              <th id="mounths2">Январь</th>
+              <th id="mounths1">Февраль</th>
+              <th id="mounths2">Март</th>
+              <th id="mounths1">Апрель</th>
+              <th id="mounths2">Май</th>
+              <th id="mounths1">Июнь</th>
+              <th id="mounths2">Июль</th>
+              <th id="mounths1">Август</th>
+              <th id="mounths2">Сентябрь</th>
+              <th id="mounths1">Октябрь</th>
+              <th id="mounths2">Ноябрь</th>
+              <th id="mounths1">Декабрь</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="common-max2">Средний максимум</td>
+              <td id="common-max1">11</td>
+              <td id="common-max2">12</td>
+              <td id="common-max1">11</td>
+              <td id="common-max2">12</td>
+              <td id="common-max1">11</td>
+              <td id="common-max2">12</td>
+              <td id="common-max1">11</td>
+              <td id="common-max2">12</td>
+              <td id="common-max1">11</td>
+              <td id="common-max2">12</td>
+              <td id="common-max1">11</td>
+              <td id="common-max2">12</td>
+            </tr>
+            <tr>
+              <td id="common-min1">Средний минимум</td>
+              <td id="common-min2">11</td>
+              <td id="common-min1">11</td>
+              <td id="common-min2">22</td>
+              <td id="common-min1">21</td>
+              <td id="common-min2">23</td>
+              <td id="common-min1">11</td>
+              <td id="common-min2">23</td>
+              <td id="common-min1">12</td>
+              <td id="common-min2">21</td>
+              <td id="common-min1">23</td>
+              <td id="common-min2">21</td>
+              <td id="common-min1">33</td>
+            </tr>
+            <tr>
+              <td id="record-max2">Рекордный максимум</td>
+              <td id="record-max1">32</td>
+              <td id="record-max2">12</td>
+              <td id="record-max1">34</td>
+              <td id="record-max2">12</td>
+              <td id="record-max1">32</td>
+              <td id="record-max2">11</td>
+              <td id="record-max1">23</td>
+              <td id="record-max2">12</td>
+              <td id="record-max1">13</td>
+              <td id="record-max2">32</td>
+              <td id="record-max1">11</td>
+              <td id="record-max2">10</td>
+            </tr>
+            <tr>
+              <td id="record-min1">Рекордный минимум</td>
+              <td id="record-min2">12</td>
+              <td id="record-min1">22</td>
+              <td id="record-min2">21</td>
+              <td id="record-min1">23</td>
+              <td id="record-min2">32</td>
+              <td id="record-min1">13</td>
+              <td id="record-min2">31</td>
+              <td id="record-min1">33</td>
+              <td id="record-min2">22</td>
+              <td id="record-min1">21</td>
+              <td id="record-min2">23</td>
+              <td id="record-min1">21</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer>
+        2018 &copy; Copyright
+      </footer> 
+    </div>   
   </body>
 </html>
