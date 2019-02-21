@@ -23,6 +23,8 @@ img{
     flex-flow: row wrap;
     position: relative;
     height: 100%;
+    overflow: auto;
+    padding-top: 116px;
 }
 /* ----------------------top-navigation----------------------------- */
 .top-navigation{
@@ -266,6 +268,7 @@ footer{
     #wrapper{
         height: 100%;
         width: 100%;
+        border: 0;
     }
     .wind-speed-cell{
         flex-wrap: wrap;
@@ -280,7 +283,7 @@ footer{
         height: 15px;
     }
     .sticky-header{
-        position: sticky;
+        position: fixed;
         z-index: 1;
         top: 0;
     }

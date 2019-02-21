@@ -19,6 +19,8 @@ body{
     flex-flow: row wrap;
     position: relative;
     height: 670px;
+    overflow: auto;
+    padding-top: 116px;
 }
 .top-navigation{
     display: inline-block;
@@ -141,6 +143,7 @@ footer{
     #wrapper{
         height: 100%;
         width: 100%;
+        border: 0;
     }
     input{
         border: 1px solid #dcdcdc;
@@ -152,7 +155,7 @@ footer{
         font-size: 8px;
     }
     .sticky-header{
-        position: sticky;
+        position: fixed;
         top: 0; 
     }
     .top-navigation a{
@@ -160,7 +163,7 @@ footer{
         padding: 3px 6px;
     }
     footer{
-        height: 10px;
+        height: 15px;
         position: sticky;
     }
     #search{
