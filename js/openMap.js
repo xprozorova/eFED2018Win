@@ -30,10 +30,6 @@ const page = {
                 callback(JSON.parse(xhr.responseText));
             }
         };
-        //document.querySelector(".overlay").style.display = "none";
-        //document.querySelector(".preloader").style.display = "none";
-        //document.querySelector("#wrapper").style.background = "white";
-
         xhr.open("GET", url, true);
         xhr.send();
     },
